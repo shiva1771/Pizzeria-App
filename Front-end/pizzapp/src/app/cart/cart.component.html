@@ -1,0 +1,50 @@
+<div class="main">
+  <div class="cart">
+    <div class="carthead">
+      <p>My Cart</p>
+    </div>
+    <hr>
+    <div class="incart" *ngFor="let p of cartService.getItems()">
+      <img [src]="p.image" width="50px" height="50px">
+      <h2 class="box" [ngClass]="p.type === 'veg' ? 'veg' : 'nonveg'"></h2>
+      <div>
+        <p class="b">{{p.name}}</p>
+        <p style="text-align: center;">{{p.price |currency:"INR":'symbol'}}</p>
+      </div>
+      <div class="count">
+        <button class="bt" (click)="cartService.decreaseQty(p._id)">-</button>
+        <label>{{ p.qty }}</label>
+        <button class="bt" (click)="cartService.increaseQty(p._id)">+</button>
+      </div>
+
+      <p class="b"> {{ p.price * p.qty | currency:'INR':'symbol' }}</p>
+      <p (click)="remove(p._id)" style="cursor:pointer">❌</p>
+
+    </div>
+    <hr>
+    <p class="subtotal"> Sub Total: {{ subTotal | currency:'INR':'symbol' }}</p>
+  </div>
+  <div>
+    <div class="total">
+      <p class="the">The Total Amount of</p>
+      <hr>
+      <div class="ing">
+        <p class="the1">Pizza </p>
+        <p>{{ subTotal | currency:'INR':'symbol' }}</p>
+      </div>
+      <div class="ing">
+        <p class="the1">Ingredients</p>
+        <p>{{cartService.getTotal() |currency :"INR":"symbol"}}</p>
+      </div>
+
+      <hr>
+      <h2 class="the1" style="text-align: right; margin-right: 20px;">
+        Total {{ totalAmount | currency:'INR':'symbol' }}
+      </h2>
+    </div><br>
+    <div class="payclear">
+      <button class="pay" (click)="pay()">Pay</button>
+      <button class="clear" (click)="clear()">Clear</button>
+    </div>
+  </div>
+</div>

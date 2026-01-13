@@ -1,0 +1,41 @@
+button {
+  padding: 10px;
+  background-color: orange;
+  color: white;
+  border: 0px;
+}
+
+.ibox {
+  display: flex;
+  border: 1px solid black;
+  width: 500px;
+  padding: 20px;
+  box-shadow: 2px 2px 5px 2px;
+
+}
+
+div {
+  margin: 10px;
+}
+
+.obox {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  margin: auto;
+}
+
+.veg {
+  background-color: green;
+}
+
+.nonveg {
+  background-color: red;
+}

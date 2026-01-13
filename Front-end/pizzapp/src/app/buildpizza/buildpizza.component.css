@@ -1,0 +1,33 @@
+p {
+    font-size: 20px;
+    text-align: center;
+}
+
+td {
+    padding: 0px 30px;
+}
+
+th {
+    padding: 0px 30px;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+.ig{
+    padding-right: 100px;
+}
+.bt {
+    background-color: black;
+    color: yellow;
+    border: 0px;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 950px;
+}
+
+.check {
+    color: orange
+}

@@ -1,0 +1,16 @@
+<div class="build">
+    <p>Pizzeria now gives you options to build your own pizza. Customize your pizza by choosing ingredients from the
+        list given below</p>
+    <table border="2">
+        <tr *ngFor="let  i of buildpizzadata">
+            <td class="ig"><img [src]="i.image" width="70px"></td>
+            <th>{{i.tname}} {{i.price | currency:'INR':'symbol' }}</th>
+            <td>
+                <input type="checkbox" [(ngModel)]="i.selected" (change)="calculateTotal()">
+                <label class="check">Add</label>
+            </td>
+        </tr>
+        <h3>Total Cost: {{ total | currency:'INR':'symbol' }}</h3>
+    </table><br>
+    <button class="bt">Build ur Pizza</button>
+</div>

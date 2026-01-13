@@ -1,0 +1,109 @@
+.total {
+    width: 250px;
+    border: 2px solid black;
+    box-shadow: 1px 1px 5px 1px;
+
+}
+
+.the {
+    padding: 0px 10px;
+    font-size: 20px;
+}
+
+.pay {
+    background-color: yellow;
+    color: black;
+    padding: 10px 30px;
+    border: 0px;
+    border-radius: 3px;
+}
+
+.clear {
+    background-color: black;
+    color: white;
+    padding: 10px 30px;
+    border: 0px;
+    border-radius: 3px;
+    margin-left: 20px;
+}
+
+.box {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+}
+
+.veg {
+    background-color: green;
+}
+
+.nonveg {
+    background-color: red;
+}
+
+.cart {
+    width: 600px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 5px 1px;
+}
+
+.carthead {
+    font-size: 22px;
+    padding-left: 10px;
+    margin: 0px;
+}
+
+.incart {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.count {
+    border: 1px solid grey;
+}
+
+.bt {
+    height: 30px;
+    border: 1px;
+    padding: 10px;
+    background-color: gray;
+    color: white;
+}
+
+label {
+    padding: 10px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px;
+}
+
+.payclear {
+    text-align: center;
+}
+
+.the1 {
+    padding-left: 20px;
+}
+
+.subtotal {
+    padding-right: 10px;
+    text-align: end;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.b {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.ing {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    font-size: 20px;
+}

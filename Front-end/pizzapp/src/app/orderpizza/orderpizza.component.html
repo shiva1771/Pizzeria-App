@@ -1,0 +1,39 @@
+<div class="obox">
+  <div class="ibox" *ngFor="let p of orderpizzadata">
+    <div>
+      <h2>{{p.name}}</h2>
+      <h2 class="box" [ngClass]="p.type === 'veg' ? 'veg' : 'nonveg'"></h2>
+      <h2>{{p.price |currency:'INR'}}</h2>
+    </div>
+
+    <div>
+      <p>{{p.description}}</p>
+
+      <h4>Ingredients</h4>
+      <p>
+        <span *ngFor="let i of p.ingredients; let last=last">
+          {{i.iname}}<span *ngIf="!last">, </span>
+        </span>
+      </p>
+
+      <h4>Topping</h4>
+      <p>
+        <span *ngFor="let t of p.topping; let last=last">
+          {{t.tname}}<span *ngIf="!last">, </span>
+        </span>
+      </p>
+    </div>
+
+    <div>
+      <img [src]="p.image" width="100px"><br><br>
+
+      <button (click)="orderpizzafunction(p)" [ngStyle]="{
+    'background-color': p.added ? 'red' : 'orange',
+    'color': 'white',
+    'font-weight': p.added ? 'bold' : 'normal'
+  }">
+        {{ p.added ? 'Remove' : 'Add to Cart' }}
+      </button>
+    </div>
+  </div>
+</div>
